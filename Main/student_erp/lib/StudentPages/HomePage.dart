@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_erp/StudentPages/LoginPage.dart';
 import 'AttendancePage.dart';
 import 'FeesPage.dart';
 import 'NotesPage.dart';
@@ -45,13 +46,81 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('Home'),
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.account_circle),
-            onPressed: () {
-              // Handle profile button press
-            },
+          Builder(
+            builder: (context) => IconButton(
+              icon: Icon(Icons.account_circle),
+              onPressed: () {
+                Scaffold.of(context)
+                    .openEndDrawer(); // Opens the sliding drawer
+              },
+            ),
           ),
         ],
+      ),
+      endDrawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              accountName:
+                  Text("Student Name"), // Replace with actual student name
+              accountEmail: Text(
+                  "student.email@example.com"), // Replace with actual email
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: AssetImage(
+                    "assets/sakthivel.jpg"), // Replace with actual image
+              ),
+              decoration: BoxDecoration(
+                color: Colors.blue, // The background color of the drawer header
+              ),
+            ),
+            ListTile(
+              title: Text("Personal Details",
+                  style: TextStyle(fontWeight: FontWeight.bold)),
+            ),
+            ListTile(
+              title: Text("Father's Name: Mr. XYZ"),
+            ),
+            ListTile(
+              title: Text("Mother's Name: Mrs. ABC"),
+            ),
+            ListTile(
+              title: Text("Email ID: student.email@example.com"),
+            ),
+            ListTile(
+              title: Text("Father's Phone: 1234567890"),
+            ),
+            ListTile(
+              title: Text("Mother's Phone: 6365248926"),
+            ),
+            ListTile(
+              title: Text("Father's Occupation: Engineer"),
+            ),
+            ListTile(
+              title: Text("Mother's Occupation: Teacher"),
+            ),
+            ListTile(
+              title: Text("Mentor's Name: Dr. John Doe"),
+            ),
+            ListTile(
+              title: Text("Mentor's Phone: 0987654321"),
+            ),
+            Divider(),
+            ListTile(
+              title: Text("Logout"),
+              trailing: Icon(Icons.logout),
+              onTap: () {
+                // Handle logout logic here
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          LoginPage()), // Redirects to the LoginPage
+                );
+              },
+            ),
+          ],
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -63,7 +132,7 @@ class _HomePageState extends State<HomePage> {
                 CircleAvatar(
                   radius: 50,
                   backgroundImage: AssetImage(
-                      "assets/sakthivel.jpg"), // Replace with your image asset
+                      "assets/sakthivel.jpg"), // Replace with actual image
                 ),
                 SizedBox(width: 20),
                 Text(
