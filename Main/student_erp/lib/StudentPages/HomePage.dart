@@ -5,12 +5,14 @@ import 'FeesPage.dart';
 import 'NotesPage.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  int _selectedIndex = 0;
+  final int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
     if (index == _selectedIndex) return;
@@ -22,19 +24,19 @@ class _HomePageState extends State<HomePage> {
       case 1:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => AttendancePage()),
+          MaterialPageRoute(builder: (context) => const AttendancePage()),
         );
         break;
       case 2:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => FeesPage()),
+          MaterialPageRoute(builder: (context) => const FeesPage()),
         );
         break;
       case 3:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => NotesPage()),
+          MaterialPageRoute(builder: (context) => const NotesPage()),
         );
         break;
     }
@@ -44,8 +46,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: const Text('Home'),
         actions: <Widget>[
+<<<<<<< HEAD
           Builder(
             builder: (context) => IconButton(
               icon: Icon(Icons.account_circle),
@@ -54,6 +57,13 @@ class _HomePageState extends State<HomePage> {
                     .openEndDrawer(); // Opens the sliding drawer
               },
             ),
+=======
+          IconButton(
+            icon: const Icon(Icons.account_circle),
+            onPressed: () {
+              // Handle profile button press
+            },
+>>>>>>> b5e933a544c817da71fd61a32bbc90ca7f802f45
           ),
         ],
       ),
@@ -127,7 +137,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Row(
+            const Row(
               children: <Widget>[
                 CircleAvatar(
                   radius: 50,
@@ -141,15 +151,15 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Circulars & Events',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Expanded(
               child: ListView(
-                children: <Widget>[
+                children: const <Widget>[
                   Card(
                     child: ListTile(
                       title: Text('Event 1'),

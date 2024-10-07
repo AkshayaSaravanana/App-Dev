@@ -121,6 +121,7 @@ packages:
   flutter_launcher_icons:
     dependency: "direct dev"
     description:
+<<<<<<< HEAD
       name: flutter_launcher_icons
       sha256: "526faf84284b86a4cb36d20a5e45147747b7563d921373d4ee0559c54fcdbcea"
       url: "https://pub.dev"
@@ -128,6 +129,15 @@ packages:
     version: "0.13.1"
   flutter_native_splash:
     dependency: "direct dev"
+=======
+      name: flutter_lints
+      sha256: "3f41d009ba7172d5ff9be5f6e6e6abb4300e263aab8866d2a0842ed2a70f8f0c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.0"
+  flutter_native_splash:
+    dependency: "direct main"
+>>>>>>> b5e933a544c817da71fd61a32bbc90ca7f802f45
     description:
       name: flutter_native_splash
       sha256: aa06fec78de2190f3db4319dd60fdc8d12b2626e93ef9828633928c2dcaea840
@@ -160,6 +170,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.2.0"
+<<<<<<< HEAD
   json_annotation:
     dependency: transitive
     description:
@@ -168,6 +179,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.9.0"
+=======
+>>>>>>> b5e933a544c817da71fd61a32bbc90ca7f802f45
   leak_tracker:
     dependency: transitive
     description:
@@ -192,6 +205,17 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.1"
+<<<<<<< HEAD
+=======
+  lints:
+    dependency: transitive
+    description:
+      name: lints
+      sha256: "976c774dd944a42e83e2467f4cc670daef7eed6295b10b36ae8c85bcbf828235"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.0"
+>>>>>>> b5e933a544c817da71fd61a32bbc90ca7f802f45
   matcher:
     dependency: transitive
     description:
